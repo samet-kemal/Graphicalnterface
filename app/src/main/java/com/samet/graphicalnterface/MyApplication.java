@@ -10,7 +10,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder().name("chartExampleRealm").build();
+        RealmConfiguration config = new RealmConfiguration.Builder().allowWritesOnUiThread(true).name("chartExampleRealm").build();
         Realm.setDefaultConfiguration(config);
     }
 }
